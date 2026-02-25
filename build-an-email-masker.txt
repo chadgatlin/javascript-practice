@@ -1,0 +1,15 @@
+** start of script.js **
+
+function maskEmail(email) {
+const [username, domain] = email.split('@');
+
+const masked  = username.slice(0,1) + '*'.repeat(username.length - 2) + username.slice(-1);
+return `${masked}@${domain}`; 
+}
+
+let email = 'chadgatlin1@yahoo.com';
+
+console.log(maskEmail(email));
+
+** end of script.js **
+
